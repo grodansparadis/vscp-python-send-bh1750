@@ -57,15 +57,19 @@ bus = smbus.SMBus(1)  # Rev 2 Pi uses 1
 
 
 # host user password guid sensorindex zone, subzone
-if ( len(sys.argv) < 5 ):
+if ( len(sys.argv) < 4 ):
     sys.exit("Wrong number of parameters - aborting")
 
 host = sys.argv[1]
 user = sys.argv[2]
 password = sys.argv[3]
-guid = sys.argv[4]
+
+guid = "-"
+if ( len(sys.argv) > 4 ):
+  guid = sys.argv[4]
 
 unit = 0
+
 sensorindex = 0
 if ( len(sys.argv) > 5 ):
     sensorindex = sys.argv[5]
