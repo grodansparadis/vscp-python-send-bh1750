@@ -112,10 +112,10 @@ def main():
     strvalue = format(readLight(),'.2f') 
 
     event = "3,"                # Priority=normal
-    event += "1040,25,"         # Level II measurement (string), Illuminance
+    event += "1040,25,"         # Level II measurement (string), Illuminance    
+    event += "0,"               # Use obid of interface
     event += ","                # DateTime
     event += "0,"               # Use interface timestamp
-    event += "0,"               # Use obid of interface
     event += guid + ","         # add GUID to event
     event += str(sensorindex) + ","
     event += str(zone) + ","
