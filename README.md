@@ -6,6 +6,49 @@ Send Illuminance readings in lux from a BH1750 sensor to a VSCP daemon as a [lev
 
 This is work based on work done by **Matt Hawkins**, https://www.raspberrypi-spy.co.uk/?s=bh1750
 
+## Installation
+
+i2c support must be enabled. Use raspi-config to enable i2c.
+
+To verify your hardware you can use i2ctools. Install with
+
+```
+sudo apt install i2ctools
+```
+
+scan bus with
+
+```
+i2cdetect 1
+```
+
+you will get something like
+
+```
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- 23 -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- -- 
+
+```
+
+as output.
+
+The _23_ is the address of the BH1750 sensor.
+
+You also need to install smbus support for python. Install with
+
+```
+pip3 install smbus
+```
+
+
+
 ## usage
 
 ```bash
