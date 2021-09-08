@@ -2,6 +2,8 @@
 
 Send Illuminance readings in lux from a BH1750 sensor to a VSCP daemon as a [level II illuminance measurement event](https://grodansparadis.github.io/vscp-doc-spec/#/./class2.measurement_str?id=type25).
 
+![](./images/bh1750.jpg)
+
 ## Credits
 
 This is work based on work done by **Matt Hawkins**, https://www.raspberrypi-spy.co.uk/?s=bh1750

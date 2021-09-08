@@ -82,7 +82,7 @@ subzone = 0
 if ( len(sys.argv) > 7 ):
     subzone = sys.argv[7]
 
-# Conncet to VSCP daemon
+# Connect to VSCP daemon
 tn = telnetlib.Telnet(host, 9598)
 tn.read_until("+OK".encode('ascii'),2)
 
@@ -133,11 +133,7 @@ def main():
     tn.write("send " .encode('ascii') + event .encode('ascii') + "\n".encode('ascii'))
     tn.read_until("+OK - Success.".encode('ascii'),2)
 
-    tn.write("quit\n".encode('ascii'))
-#  while True:
-#    lightLevel=readLight()
-#    print("Light Level : " + format(lightLevel,'.2f') + " lx")
-#    time.sleep(0.5)
+tn.write("quit\n".encode('ascii'))
 
 if __name__=="__main__":
    main()
