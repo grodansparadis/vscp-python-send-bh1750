@@ -47,8 +47,6 @@ You also need to install smbus support for python. Install with
 pip3 install smbus
 ```
 
-
-
 ## usage
 
 ```bash
