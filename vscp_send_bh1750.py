@@ -94,7 +94,6 @@ tn.write("pass " .encode('ascii') + password .encode('ascii') + "\n".encode('asc
 
 tn.read_until("+OK - Success.".encode('ascii'),2)
 
-
 def convertToNumber(data):
   # Simple function to convert 2 bytes of data
   # into a decimal number. Optional parameter 'decimals'
